@@ -1,0 +1,19 @@
+{
+  "name": "bike-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgorSapko/bike-back.git"
+  },
+  "author": "IgorSapko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgorSapko/bike-back/issues"
+  },
+  "homepage": "https://github.com/IgorSapko/bike-back#readme"
+}
