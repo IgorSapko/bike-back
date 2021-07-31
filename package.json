@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",
-    "test": "test"
+    "test": "test",
+    
+    "deploy": "netlify deploy"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/IgorSapko/bike-back/issues"
   },
-  "homepage": "https://github.com/IgorSapko/bike-back#readme",
+  
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
