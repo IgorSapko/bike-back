@@ -34,8 +34,10 @@ async function updateBike(req, res) {
 
 async function deleteBike(req, res) {
   try {
-       const bike = await Bike.findByIdAndDelete(req.body.id);
-    if (!bike) {
+      //  const bike = await Bike.findByIdAndDelete(req.body.id);
+       const bike = await Bike.findByIdAndRemove(req.body.id);
+       
+       if (!bike) {
       return res.status(404).send("Bike is not found");
     }
     res.json(bike);
