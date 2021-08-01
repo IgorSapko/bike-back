@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const bikeRouter = require("./bike/bike.router");
 
 dotenv.config();
+const cors = require('cors');
 // mongoose.set('debug', true);
 
 const PORT = process.env.PORT || 8080;
@@ -32,6 +33,7 @@ function initServer() {
 
 function initMiddlewares(app) {
   app.use(express.json());
+  app.use(cors({ origin: process.env.ALLOWED_ORIGIN }));
 }
 
 function declareRoutes(app) {
