@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const bikeRouter = require('./bike/bike.router');
 
 dotenv.config();
-mongoose.set('debug', true);
+// mongoose.set('debug', true);
 
 // const PORT = process.env.PORT || 8080;
 const PORT = 8080;
