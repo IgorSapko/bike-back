@@ -18,6 +18,19 @@ async function createBike(req, res) {
   }
 }
 
+async function updateBike(req, res) {
+  try {
+    console.log(req.body)
+    const bike = await Bike.findByIdAndUpdate(req.body.id, { $set: req.body.status },
+      {
+          new: true,
+      });
+    res.status(201).json(bike);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+}
+
 async function deleteBike(req, res) {
   try {
     const {
@@ -37,4 +50,5 @@ module.exports = {
   getBikes,
   createBike,
   deleteBike,
+  updateBike
 };

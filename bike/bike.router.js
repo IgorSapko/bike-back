@@ -5,6 +5,7 @@ const router = Router();
 
 router.get('/', BikeController.getBikes);
 router.post('/', BikeController.createBike);
+router.patch('/', BikeController.updateBike);
 router.delete('/', BikeController.deleteBike);
 
 module.exports = router;
