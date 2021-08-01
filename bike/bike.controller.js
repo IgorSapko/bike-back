@@ -21,7 +21,8 @@ async function createBike(req, res) {
 async function updateBike(req, res) {
   try {
     console.log(req.body)
-    const bike = await Bike.findByIdAndUpdate(req.body.id, { $set: req.body.status },
+    const bike = await Bike.findByIdAndUpdate(req.body.id, 
+      { $set: {status:req.body.status} },
       {
           new: true,
       });
