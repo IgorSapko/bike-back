@@ -35,7 +35,7 @@ function initMiddlewares(app) {
 
 function declareRoutes(app) {
         // app.use('/bikes', bikeRouter);
-    app.use('/', bikeRouter);
+    app.use('/bikes', bikeRouter);
 }
 
 async function connectToDb() {

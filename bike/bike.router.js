@@ -3,7 +3,7 @@ const BikeController = require('./bike.controller');
 
 const router = Router();
 
-router.get('/bikes', BikeController.getBikes);
+router.get('/', BikeController.getBikes);
 router.post('/', BikeController.createBike);
 
 module.exports = router;
