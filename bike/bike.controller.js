@@ -37,14 +37,14 @@ async function updateBike(req, res) {
 async function deleteBike(req, res) {
   try {
     console.log("req.body.id", req.body.id);
-    const bike = await Bike.findById(req.body.id);
-    // const bike = await Bike.findByIdAndDelete(req.body.id);
+    // const bike = await Bike.findById(req.body.id);
+    const bike = await Bike.findByIdAndDelete(req.body.id);
 
-    // if (!bike) {
-    //   return res.status(404).send("Bike is not found", 'req.body.id', req.body.id, 'req.body', req.body);
-    // }
-    // res.json(bike);
-    res.json(req.body.id);
+    if (!bike) {
+      return res.status(404).send("Bike is not found", 'req.body.id', req.body.id, 'req.body', req.body);
+    }
+    res.json(bike);
+    // res.json(req.body.id);
   } catch (error) {
     res.status(500).send(error.message);
   }
