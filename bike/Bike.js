@@ -24,11 +24,17 @@ const BikeSchema = new Schema({
   },
   description: {
     type: String,
-    // required: true,
+    required: true,
   },
   status: {
     type: String,
+    required: true,
     default: "Available",
+  },
+  id: {
+    type: String,
+    required: true,
+    unique: true,
   },
 });
 
