@@ -32,7 +32,7 @@ async function getStatistics() {
       },
     },
   ]);
-  const averageCost = resultTotalPrice[0].total / totalQuantityBikes;
+  const averageCost = (resultTotalPrice[0].total / totalQuantityBikes).toFixed(2);
   return {
     totalQuantityBikes,
     avialableBikesQuantity,
